@@ -11,6 +11,7 @@ requires = ['pyramid',
             'transaction',
             'pyramid_tm',
             'pyramid_debugtoolbar',
+            'six',
             'zope.sqlalchemy']
 
 setup(name='pyramid_cas',
