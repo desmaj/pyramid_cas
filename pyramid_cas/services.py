@@ -1,6 +1,7 @@
 import logging
-from urllib import urlencode, urlopen
-from urlparse import urljoin
+from six.moves.urllib.parse import urlencode
+from six.moves.urllib.parse import urljoin
+from six.moves.urllib.request import urlopen
 from xml.etree import ElementTree
 
 from pyramid.httpexceptions import HTTPFound
