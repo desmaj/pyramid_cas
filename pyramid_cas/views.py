@@ -4,8 +4,17 @@ import logging
 
 # pyramid
 from pyramid.httpexceptions import HTTPFound, HTTPForbidden
-from pyramid.security import remember, forget, unauthenticated_userid
+from pyramid.security import remember
+from pyramid.security import forget
 from pyramid.view import view_config
+
+
+# pyramid.security.unauthenticated_userid is deprecated for pyramid 2.0
+try:
+    from pyramid.security import unauthenticated_userid
+except ImportError:
+    def unauthenticated_userid(request):
+        return request.identity
 
 
 ## pyramid_cs
