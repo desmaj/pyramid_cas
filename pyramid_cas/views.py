@@ -9,7 +9,9 @@ from pyramid.security import forget
 from pyramid.view import view_config
 
 
-# pyramid.security.unauthenticated_userid is deprecated for pyramid 2.0
+# pyramid.security.unauthenticated_userid is deprecated for pyramid 2.0 in
+# in favor of request.identity. This should allow pyramid_cas to support
+# both APIs.
 try:
     from pyramid.security import unauthenticated_userid
 except ImportError:
