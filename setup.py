@@ -2,6 +2,9 @@ import os
 
 from setuptools import setup, find_packages
 
+VERSION = '0.4.4'
+
+
 here = os.path.abspath(os.path.dirname(__file__))
 README = open(os.path.join(here, 'README.rst')).read()
 CHANGES = open(os.path.join(here, 'CHANGES.txt')).read()
@@ -15,7 +18,7 @@ requires = ['pyramid',
             'zope.sqlalchemy']
 
 setup(name='pyramid_cas',
-      version='0.4.3',
+      version=VERSION,
       description='A CAS client for use with the Pyramid web framework',
       long_description=README + '\n\n' + CHANGES,
       classifiers=['Programming Language :: Python',
